@@ -1,0 +1,28 @@
+{
+  "name": "zhihu",
+  "version": "1.0.0",
+  "description": "spider girl's photo",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0wade/myCode/zhihu"
+  },
+  "keywords": [
+    "spider",
+    "node",
+    "girl's",
+    "photo"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "devDependencies": {
+    "async": "^2.1.4",
+    "cheerio": "^0.22.0",
+    "fs": "^0.0.1-security",
+    "mkdirp": "^0.5.1",
+    "superagent": "^3.0.0"
+  }
+}
