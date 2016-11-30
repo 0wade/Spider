@@ -14,7 +14,7 @@ var download = function(url,dir, filename){
     	console.log(error);
         return;
     }).on('response',function(response){
-    	// console.log('正在下载'+url);
+    	console.log('正在下载'+url);
     }).pipe(fs.createWriteStream(dir + "/" + filename)).on('error',function(error){
     	console.log(error);return;
     }).on('close',function(fd){
@@ -31,7 +31,6 @@ var more={
         'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
     }   
 }
-var open=Date.now();
 //下载方法
 var download = function(url, filename,callback){
     superagent(url).on('error',function(error){
@@ -123,12 +122,7 @@ function QuestionAnswerListV2(){
                     if(err){
                         console.log(err);
                     }else{
-                        console.log("全部已下载完毕!");
-                        var final=Date.now()-open;
-                        function formatTime(second) {
-                            return [parseInt(second / 60 / 60), second / 60 % 60, second % 60].join(":").replace(/\b(\d)\b/g, "0$1");
-                        }
-                        console.log(formatTime(final/1000));                        
+                        console.log("全部已下载完毕!");                       
                     }
                 }); 
             }
